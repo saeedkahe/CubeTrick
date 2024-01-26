@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(45deg , black , gray);
+            height: 100vh;
+            
+        }
+        .cube{
+            width: 400px;
+            height: 400px;
+            /* border: 1px solid black; */
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            position: relative;
+            transform: rotate3d(1,1,1,20deg);
+            transition: 20s ease;
+        }
+        .cube>div{
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: capitalize;
+            color: white;
+            font-size: 3em;
+            position: absolute;
+        }
+        .cube>div:nth-of-type(1){
+            transform: translateZ(200px);
+            background: tomato;
+        }
+        .cube>div:nth-of-type(2){
+            transform: translateZ(-200px);
+            background: turquoise;
+        }
+        .cube>div:nth-of-type(3){
+            transform-origin: right;
+            transform: rotateY(90deg) translateX(200px);
+            background: violet;
+        }
+        .cube>div:nth-of-type(4){
+            transform-origin: left;
+            transform: rotateY(-90deg) translateX(-200px);
+            background: gray;
+        }
+        .cube>div:nth-of-type(5){
+            transform-origin: bottom;
+            transform: rotateX(90deg) translateY(200px);
+            background: blue;
+        }
+        .cube>div:nth-of-type(6){
+            transform-origin: top;
+            transform: rotateX(-90deg) translateY(-200px);
+            background: brown;
+        }
+        body:hover .cube{
+            transform: rotate3d(1,1,1,360deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div>front</div>
+        <div>end</div>
+        <div>right</div>
+        <div>left</div>
+        <div>bottom</div>
+        <div>top</div>
+    </div>
+</body>
+</html>
