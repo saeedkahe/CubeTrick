@@ -19,4 +19,4 @@ In order for you to understand this issue better, I have named each part.<br>
 ### Good luck!😘<br>
 <hr>
 <br>
-Online demo link:
+Online demo link: https://saeedkahe.github.io/CubeTrick/
